@@ -16,10 +16,14 @@ class Example004Controller extends AbstractController
     return new Response('OMG! My first page already! WOOO!');
     }
 
+
+    /**
+     * @Route("/shows/{slug}")
+     */
     public function show($slug)
     {
         return $this->render('temppage/show.html.twig', [
-        'subject' => ucwords(str_replace('/',' ',$slug)),
+        'subject' => ucwords(str_replace('-',' ',$slug)),
         ]);
     }
 

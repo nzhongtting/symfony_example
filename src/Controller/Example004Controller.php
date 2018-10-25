@@ -22,8 +22,16 @@ class Example004Controller extends AbstractController
      */
     public function show($slug)
     {
+
+        $just_description = [
+          'There is something about ~ that makes me ~',
+          'would like to ~ about what ~',
+          'that I happened to ~',
+        ];
+
         return $this->render('temppage/show.html.twig', [
         'subject' => ucwords(str_replace('-',' ',$slug)),
+        'j_description' => $just_description,
         ]);
     }
 

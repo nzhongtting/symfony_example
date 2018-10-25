@@ -1,4 +1,11 @@
 <h1>{{ subject }}</h1>
+<h2>Description ({{ j_description|length }})</h2>
+<ul>
+  {% for comment in j_description %}
+    <li>{{ comment }}</li>
+  {% endfor %}
+</ul>
+
 <div>
     <p>
         There is something about the ocean that makes me feel calm.

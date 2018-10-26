@@ -1,3 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Read : {{ subject }}{% endblock %}
+
+{% block body %}
+
 <h1>{{ subject }}</h1>
 <h2>Description ({{ j_description|length }})</h2>
 <ul>
@@ -17,3 +23,5 @@
         Your office is in the same building that I happen to work in.
     </p>
 </div>
+
+{% endblock %}
